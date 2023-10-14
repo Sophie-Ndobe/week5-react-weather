@@ -1,16 +1,17 @@
 import React from "react";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   return (
     <div className="Weather mt-5">
       <div className="row">
         <div className="col-6">
-          <h1>Cape Town</h1>
+          <h1>{props.city}</h1>
           <ul>
-            <li>Saturday 13:17, broken clouds</li>
+            <li>Saturday 13:17, {props.description}</li>
             <li>
-              Humidity: <strong>79%</strong>, Wind <strong>1.34km/h</strong>
+              Humidity: <strong>{props.humidity}%</strong>, Wind{" "}
+              <strong>{props.wind}km/h</strong>
             </li>
           </ul>
         </div>
@@ -20,7 +21,7 @@ export default function Weather() {
               src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
               alt="partly cloudy icon"
             />
-            <span className="temperature">15</span>
+            <span className="temperature">{props.temperature}</span>
             <span className="units">
               <span>
                 <a href="/" className="celciusUnit">
