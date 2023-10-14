@@ -16,7 +16,10 @@ export default function Weather() {
         </div>
         <div className="col-6">
           <div className="d-flex justify-content-end temperatureDetails">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" />
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="partly cloudy icon"
+            />
             <span className="temperature">15</span>
             <span className="units">
               <span>
