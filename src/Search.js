@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./Search.css";
+import Weather from "./Weather";
 
 export default function Search() {
   const [city, setCity] = useState(" ");
-  
+
   function handleSubmit(event) {
     event.preventDefault();
     alert(`${city}`);
@@ -29,6 +30,7 @@ export default function Search() {
           </div>
         </div>
       </form>
+      <Weather />
     </div>
   );
 }
