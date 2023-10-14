@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Search.css";
 import axios from "axios";
 import Weather from "./Weather";
+import ForecastStructure from "./ForecastStructure";
+
 
 export default function Search({ defaultCity }) {
   const [city, setCity] = useState(defaultCity);
@@ -55,6 +57,8 @@ export default function Search({ defaultCity }) {
         wind={weather.wind}
         city={weather.city}
       />
+      <ForecastStructure />
+      
     </div>
   );
 }
