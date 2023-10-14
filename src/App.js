@@ -1,11 +1,15 @@
 import "./App.css";
+import Search from "./Search";
 
 function App() {
   return (
     <div className="App">
-      <h1>This is a React Weather App</h1>
+      <div className="container">
+        <Search />
+      </div>
     </div>
   );
+
 }
 
 export default App;
