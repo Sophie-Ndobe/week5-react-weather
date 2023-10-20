@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Search.css";
 import axios from "axios";
 import Weather from "./Weather";
-import ForecastStructure from "./ForecastStructure";
 import Forecast from "./Forecast";
 
 export default function Search({ defaultCity }) {
@@ -10,7 +9,7 @@ export default function Search({ defaultCity }) {
   const [weather, setWeather] = useState({ ready: false });
 
   function displayWeather(response) {
-      setWeather({
+    setWeather({
       ready: true,
       temperature: Math.round(response.data.temperature.current),
       city: response.data.city,
@@ -61,7 +60,6 @@ export default function Search({ defaultCity }) {
           wind={weather.wind}
           city={weather.city}
         />
-        <ForecastStructure />
         <Forecast city={weather.city} time={weather.time} />
       </div>
     );
